@@ -27,10 +27,12 @@ r2_dt = r2_score(Y_test, Y_pred_dt)
 rmse_dt = np.sqrt(mean_absolute_error(Y_test, Y_pred_dt))
 mae_dt = mean_absolute_error(Y_test, Y_pred_dt)
 
+#"""
 print("Decision Tree:")
 print(f'R-squared: {r2_dt}')
 print(f'Root Mean Squared Error: {rmse_dt}')
 print(f'Mean Absolute Error: {mae_dt}')
+#"""
 #--------------------------------------------------------------------------------------------------------------------------------
 rf_model = RandomForestRegressor(n_estimators=100, random_state=1)
 rf_model.fit(X_train, Y_train)
@@ -41,7 +43,9 @@ r2_rf = r2_score(Y_test, Y_pred_rf)
 rmse_rf = np.sqrt(mean_absolute_error(Y_test, Y_pred_rf))
 mae_rf = mean_absolute_error(Y_test, Y_pred_rf)
 
+#"""
 print("\nRandom Forest:")
 print(f'R-squared: {r2_rf}')
 print(f'RMSE: {rmse_rf}')
 print(f'MAE: {mae_rf}')
+#"""
